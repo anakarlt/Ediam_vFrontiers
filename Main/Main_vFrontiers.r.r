@@ -21,7 +21,7 @@
 ## ==================================================================================================================================================
 #Source Model
   dir.model<-paste(root,"TechChange Model/",sep="")
-  model.version<-"InternationalGreenTechChangeModel_10_22_2015.r"
+  model.version<-model.version <- "Ediam_vFrontiers.r.r"
   source(paste(dir.model,model.version,sep=""))
 #Source Experimental Design
   dir.exp<-paste(root,"RDM Inputs/",sep="")
