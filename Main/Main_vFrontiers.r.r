@@ -5,7 +5,7 @@
 ## =================================================================================================================================================
 ## This section creates the Experimental Design Based on Input Tables
 ## =================================================================================================================================================
-  dir.exp.inputs<-paste(root,"RDM Inputs\\",sep="")
+  dir.exp.inputs<-paste(root,"RDM Inputs/",sep="")
   Limits.File<-"Limits.csv"
   Policies.File<-"Policies.csv"
   Climate.File<-"Climate.csv"
@@ -20,15 +20,15 @@
 ## This section runs the model across the experimental design and prints an output file for each run
 ## ==================================================================================================================================================
 #Source Model
-  dir.model<-paste(root,"TechChange Model\\",sep="")
+  dir.model<-paste(root,"TechChange Model/",sep="")
   model.version<-"InternationalGreenTechChangeModel_10_22_2015.r"
   source(paste(dir.model,model.version,sep=""))
 #Source Experimental Design
-  dir.exp<-paste(root,"RDM Inputs\\",sep="")
+  dir.exp<-paste(root,"RDM Inputs/",sep="")
   experiment.version<-"Exp.design.csv"
   Exp.design<-read.csv(paste(dir.exp,experiment.version,sep=""))
 #Define directory to print output files
-  dir.harness<-paste(root,"RDM Harness\\",sep="")
+  dir.harness<-paste(root,"RDM Harness/",sep="")
 #Clean output folder
   do.call(file.remove,list(paste(dir.harness,list.files(dir.harness, pattern="*.csv", full.names=FALSE),sep="")))
 #Set up parallel environment
@@ -158,9 +158,9 @@ if (x['policy.name']=="FWA")
 ## =====================================================================================================
   Number.Cores<-4
  #Define directory parameters
-  dir.inputs<-paste(root,"RDM Inputs\\",sep="")
-  dir.harness<-paste(root,"RDM Harness\\",sep="")
-  dir.output<-paste(root,"RDM Outputs\\",sep="")
+  dir.inputs<-paste(root,"RDM Inputs/",sep="")
+  dir.harness<-paste(root,"RDM Harness/",sep="")
+  dir.output<-paste(root,"RDM Outputs/",sep="")
  #load needed libraries
   library(reshape2)
   library(data.table)
@@ -202,9 +202,9 @@ if (x['policy.name']=="FWA")
 ## =====================================================================================================
 Number.Cores<-18
 #Define directory parameters
- dir.inputs<-paste(root,"RDM Inputs\\",sep="")
- dir.harness<-paste(root,"RDM Harness\\",sep="")
- dir.output<-paste(root,"RDM Outputs\\",sep="")
+ dir.inputs<-paste(root,"RDM Inputs/",sep="")
+ dir.harness<-paste(root,"RDM Harness/",sep="")
+ dir.output<-paste(root,"RDM Outputs/",sep="")
 
 #crate vector with file names
  experiment.version<-"Exp.design.csv"
