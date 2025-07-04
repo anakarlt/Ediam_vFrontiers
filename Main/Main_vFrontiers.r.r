@@ -1,5 +1,5 @@
 #cloud
- root<-"C:\\~TechChange-RDM\\"
+ root <- "/content/TechChange-RDM/"
  Number.Cores<-32
 
 ## =================================================================================================================================================
@@ -33,9 +33,9 @@
   do.call(file.remove,list(paste(dir.harness,list.files(dir.harness, pattern="*.csv", full.names=FALSE),sep="")))
 #Set up parallel environment
 #Run Model in Parallel
-  library(snow,lib=paste(root,"Rlibraries\\",sep=""))
-  library(deSolve,lib=paste(root,"Rlibraries\\",sep=""))
-  library(optimx,lib=paste(root,"Rlibraries\\",sep=""))
+  library(snow)
+  library(deSolve)
+  library(optimx)
   nCore<-Number.Cores
   cl <- makeSOCKcluster(names = rep('localhost',nCore))
   global.elements<-list("Exp.design","TechChangeMod","dir.harness","dede","lagderiv","lagvalue","optimx") # dede, lagderiv are functions od deSolve
@@ -162,9 +162,9 @@ if (x['policy.name']=="FWA")
   dir.harness<-paste(root,"RDM Harness\\",sep="")
   dir.output<-paste(root,"RDM Outputs\\",sep="")
  #load needed libraries
-  library(reshape2,lib= paste(root,"Rlibraries\\",sep=""))
-  library(data.table,lib=paste(root,"Rlibraries\\",sep=""))
-  library(snow,lib=paste(root,"Rlibraries\\",sep=""))
+  library(reshape2)
+  library(data.table)
+  library(snow)
 #create vector with file names
   filenames <- list.files(dir.harness, pattern="*.csv", full.names=FALSE)
 #source function to process harnessed output data
@@ -214,8 +214,8 @@ Number.Cores<-18
 #source function to process harnessed output data
  source(paste(dir.inputs,"harness_processing.r",sep=""))
 #run post-processing in parallel
-  library(data.table,lib=paste(root,"Rlibraries\\",sep=""))
-  library(snow,lib=paste(root,"Rlibraries\\",sep=""))
+  library(data.table)
+  library(snow)
   nCore<-Number.Cores
   cl <- makeSOCKcluster(names = rep('localhost',nCore))
   global.elements<-list("dir.inputs","experiment.version","dir.harness","process.harness.data")
