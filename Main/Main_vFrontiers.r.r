@@ -1,6 +1,7 @@
 #cloud
- root<-"C:\\~TechChange-RDM\\"
- Number.Cores<-32
+ root <- "/content/Ediam_vFrontiers/"
+ Number.Cores <- 4   # si quieres, deja 4 núcleos para probar
+
 
 ## =================================================================================================================================================
 ## This section creates the Experimental Design Based on Input Tables
