@@ -20,9 +20,10 @@
 ## This section runs the model across the experimental design and prints an output file for each run
 ## ==================================================================================================================================================
 #Source Model
-  dir.model<-paste(root,"TechChange Model/",sep="")
-  model.version<-model.version <- "Ediam_vFrontiers.r.r"
-  source(paste(dir.model,model.version,sep=""))
+  dir.model <- paste(root,"TechChange Model/",sep="")
+  model.version <- "Ediam_vFrontiers.r.r"
+  source(paste(dir.model, model.version, sep=""))
+
 #Source Experimental Design
   dir.exp<-paste(root,"RDM Inputs/",sep="")
   experiment.version<-"Exp.design.csv"
